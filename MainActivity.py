@@ -59,5 +59,9 @@ class MainActivity:
 if __name__ == '__main__':
     starter = MainActivity()
     starter.generate_random_core(cores=10, upper_time_delay=2)
+
     html_gen = HtmlGenerator()
-    print(html_gen.generate_html_from_template(starter.core_list))
+    html_data = html_gen.generate_html_from_template(starter.core_list)
+    out_file = open('output/output.html', 'w')
+    out_file.write(html_data)
+    out_file.close()
