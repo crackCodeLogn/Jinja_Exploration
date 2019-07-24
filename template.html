@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>{{header}}</head>
+<body>
+<hr>
+<table style="border: 3px solid black; width:100%">
+    <tr>
+        <th style="border:2px solid black">SID</th>
+        <th style="border:2px solid black">NAME</th>
+        <th style="border:2px solid black">START-TIME</th>
+        <th style="border:2px solid black">END-TIME</th>
+        <th style="border:2px solid black">DIFF-TIME</th>
+    </tr>
+    {% for core in core_list %}
+    <tr>
+        <td style="border:1px solid black;text-align:center">{{core.sid}}</td>
+        <td style="border:1px solid black;text-align:center">{{core.name}}</td>
+        <td style="border:1px solid black;text-align:center">{{core.start_time}}</td>
+        <td style="border:1px solid black;text-align:center">{{core.end_time}}</td>
+        <td style="border:1px solid black;text-align:center">{{core.diff_time}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
